@@ -10,4 +10,15 @@ jobs:
         run: npm ci
       - name: Test applecation
         run: npm run test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: Install dependecies
+        run: npm ci
+      - name: Build applecation
+        run: npm run build
+      - name: Deploy
+        run: echo Deploying ...
       
